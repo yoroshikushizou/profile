@@ -1,0 +1,665 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>林頌學 — Resume</title>
+
+<style>
+
+/* RESET */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, "Noto Sans TC", sans-serif;
+  background: #ffffff;
+  color: #222;
+  line-height: 1.7;
+}
+
+/* MAIN CONTAINER */
+
+.resume {
+  max-width: 1100px;
+  margin: 55px auto;
+  padding: 0 55px;
+}
+
+/* TOP LINE */
+
+.top-line {
+  height: 3px;
+  background: #222;
+  margin-bottom: 50px;
+}
+
+/* TWO COLUMN LAYOUT */
+
+.resume-content {
+  display: grid;
+  grid-template-columns: 30% 70%;
+}
+
+/* LEFT COLUMN */
+
+.left-column {
+  padding-right: 42px;
+  border-right: 1px solid #ccc;
+}
+
+/* RIGHT COLUMN */
+
+.right-column {
+  padding-left: 62px;
+}
+
+/* PROFILE HEADER */
+
+.profile-header {
+  margin-bottom: 35px;
+}
+
+.profile-photo {
+  width: 100%;
+  max-width: 220px;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  display: block;
+  margin-bottom: 22px;
+}
+
+.profile-name {
+  font-size: 29px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 1.3;
+  margin-bottom: 5px;
+}
+
+.profile-title {
+  font-size: 12px;
+  color: #888;
+  letter-spacing: 2px;
+}
+
+/* SECTION */
+
+.section {
+  margin-bottom: 48px;
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1.5px solid #333;
+  padding-bottom: 7px;
+  margin-bottom: 17px;
+}
+
+.section-number {
+  font-family: monospace;
+  font-size: 14px;
+  color: #999;
+}
+
+.section-heading h2 {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+/* CONTACT */
+
+.contact-item {
+  margin-bottom: 12px;
+}
+
+.contact-label {
+  font-size: 10px;
+  color: #999;
+  letter-spacing: 1.5px;
+}
+
+.contact-value {
+  font-size: 13px;
+  word-break: break-word;
+}
+
+/* PROFILE */
+
+.profile-text {
+  font-size: 13px;
+  line-height: 2;
+  color: #555;
+}
+
+/* SKILLS */
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.skills-list span {
+  border: 1px solid #bbb;
+  padding: 3px 11px;
+  font-size: 11px;
+}
+
+/* SOFTWARE */
+
+.software-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #ddd;
+  font-size: 13px;
+}
+
+.software-level {
+  font-size: 10px;
+  color: #999;
+  letter-spacing: 0.5px;
+}
+
+/* LANGUAGES */
+
+.language-item {
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+/* RIGHT COLUMN CONTENT */
+
+.experience-item {
+  margin-bottom: 28px;
+}
+
+.item-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 3px;
+}
+
+.date {
+  font-size: 12px;
+  color: #999;
+  letter-spacing: 1px;
+}
+
+.item-type {
+  font-size: 11px;
+  color: #999;
+  letter-spacing: 1px;
+  text-align: right;
+}
+
+.item-title {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+.item-subtitle {
+  font-size: 13px;
+  font-weight: 600;
+  color: #666;
+  margin: 2px 0 8px;
+}
+
+.item-description {
+  font-size: 13px;
+  color: #666;
+  line-height: 2;
+}
+
+.project-item {
+  margin-bottom: 25px;
+}
+
+.interests {
+  font-size: 13px;
+  color: #666;
+  line-height: 2;
+}
+
+/* FOOTER */
+
+.footer {
+  border-top: 1.5px solid #333;
+  margin-top: 38px;
+  padding: 12px 0 25px;
+  display: flex;
+  justify-content: space-between;
+  font-family: monospace;
+  font-size: 10px;
+  color: #999;
+  letter-spacing: 1px;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+  .resume {
+    margin: 25px auto;
+    padding: 0 25px;
+  }
+
+  .top-line {
+    margin-bottom: 30px;
+  }
+
+  .resume-content {
+    grid-template-columns: 1fr;
+  }
+
+  .left-column {
+    padding-right: 0;
+    border-right: none;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .right-column {
+    padding-left: 0;
+    padding-top: 35px;
+  }
+
+  .profile-photo {
+    width: 180px;
+  }
+
+  .profile-name {
+    font-size: 26px;
+  }
+
+  .section {
+    margin-bottom: 35px;
+  }
+
+  .section-heading h2 {
+    font-size: 15px;
+  }
+
+  .footer {
+    gap: 10px;
+    font-size: 9px;
+  }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="resume">
+
+  <div class="top-line"></div>
+
+  <div class="resume-content">
+
+    <!-- LEFT COLUMN -->
+
+    <aside class="left-column">
+
+      <!-- PHOTO AND NAME -->
+
+      <div class="profile-header">
+
+        <img
+          src="images/profile.jpg"
+          alt="Profile Photo"
+          class="profile-photo"
+        >
+
+        <h1 class="profile-name">林頌學</h1>
+
+        <p class="profile-title">
+          MUSICIAN / CREATIVE
+        </p>
+
+      </div>
+
+
+      <!-- 01 CONTACT -->
+
+      <section class="section" id="contact">
+
+        <div class="section-heading">
+          <span class="section-number">01</span>
+          <h2>CONTACT</h2>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-label">LOCATION</div>
+          <div class="contact-value">
+            台北市新莊區中正路803巷15號8樓
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-label">EMAIL</div>
+          <div class="contact-value">
+            yoroshikushizou@gmail.com
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-label">PHONE</div>
+          <div class="contact-value">
+            +886 0960721019
+          </div>
+        </div>
+<!--
+        <div class="contact-item">
+          <div class="contact-label">WEBSITE</div>
+          <div class="contact-value">
+            yourwebsite.com
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-label">INSTAGRAM</div>
+          <div class="contact-value">
+            @tounoexperiment
+          </div>
+        </div>
+-->
+      </section>
+
+  <!-- 06 EDUCATION -->
+
+      <section class="section" id="education">
+
+        <div class="section-heading">
+          <span class="section-number">02</span>
+          <h2>EDUCATION</h2>
+        </div>
+
+        <div class="experience-item">
+
+          <div class="item-top">
+           
+            <span class="item-type">TAIWAN</span>
+          </div>
+
+          <p class="item-description">
+            輔仁大學音樂系－爵士音樂組
+          </p>
+
+          
+          </p>
+
+          <p class="item-description">
+            師承陳國華、Andrew Salim、李承育
+          </p>
+
+        </div>
+
+      </section>
+
+
+      
+
+
+      <!-- 03 SKILLS -->
+
+      <section class="section" id="skills">
+
+        <div class="section-heading">
+          <span class="section-number">03</span>
+          <h2>SKILLS</h2>
+        </div>
+
+        <div class="skills-list">
+          <span>Jazz</span>
+          <span>Modern Jazz</span>
+          <span>Afro Cuban</span>
+          <span>Latin</span>
+          <span>Fusion</span>
+          <span>Funk</span>
+          <span>R&B</span>
+			 <span>Pop</span>
+			 <span>爵士樂理</span>
+        </div>
+
+      </section>
+
+
+     
+
+      <!-- 05 LANGUAGES -->
+
+      <section class="section" id="languages">
+
+        <div class="section-heading">
+          <span class="section-number">04</span>
+          <h2>LANGUAGES</h2>
+        </div>
+
+        <p class="language-item">
+          Chinese — Native
+        </p>
+
+        <p class="language-item">
+          English — Conversational
+        </p>
+
+      </section>
+
+    </aside>
+
+
+    <!-- RIGHT COLUMN -->
+
+    <main class="right-column">
+
+<!-- 02 PROFILE -->
+
+      <section class="section" id="profile">
+
+        <div class="section-heading">
+          <span class="section-number">05</span>
+          <h2>PROFILE</h2>
+        </div>
+
+        <h1 class="profile-text">
+          現就讀輔仁大學爵士音樂組，主修爵士鼓。
+          師承陳國華、Andrew Salim。
+          受 Brian Blade、Marcus Gilmore、
+          Kayvon Gordon 等現代爵士鼓師啟發，
+          演出經歷豐富，經常演奏爵士、拉丁、
+          融合、放克等曲風。
+        </h1>   
+
+       
+
+   </section>
+  <section class="section" id="experience">
+
+        <div class="section-heading">
+
+          <span class="section-number">06</span>
+
+          <h2>EXPERIENCE</h2>
+
+        </div
+
+          
+ <!-- Performance -->
+
+        <div class="experience-item">
+
+          <div class="item-top">
+
+            
+          </div>
+
+          <h3 class="item-title">
+
+            演出經歷
+
+          </h3>
+
+          <p class="item-description">
+            固定巡演樂團Trio On Trip鼓手<br>
+            R&B樂團Empty Poem鼓手<br>
+            Smith & Wollensky 代班鼓手<br>
+            2026北海岸時尚藝術季演出樂手<br>
+				2026政大金弦獎複賽空白詩鼓手<br>
+				2026空白詩單曲52個禮拜天、I miss you參與錄製<br>
+				2026嘉義管樂節三重奏演出<br>
+            2026多次於台北各大爵士酒吧演出
+          </p>
+
+        </div>
+    
+
+
+        <!-- Teaching -->
+
+        <div class="experience-item">
+
+          <div class="item-top">
+            
+            
+          </div>
+			<h3 class="item-title">
+            教學經歷
+          </h3>
+          <p class="item-description">
+				Parkland-爵士鼓教師<br>
+				TJO Jazz Camp－爵士鼓助教<br>
+				捷拍樂器-爵士鼓教師
+            采穎音樂教室－爵士鼓教師<br>
+            教學年齡經驗區間5-50歲
+          </p>
+
+        </div>
+
+
+        <!-- Projects -->
+<!--
+        <div class="experience-item">
+
+          <h3 class="item-subtitle">
+            Self-initiated Projects
+          </h3>
+
+          <p class="item-description">
+            Created posters, image-based experiments
+            and visual materials for independent
+            creative projects.
+          </p>
+
+        </div>
+-->
+
+      </section>
+
+
+      <!-- 08 SELECTED PROJECTS -->
+
+   <!--   <section class="section" id="projects">
+
+        <div class="section-heading">
+          <span class="section-number">08</span>
+          <h2>SELECTED PROJECTS</h2>
+        </div>
+
+        <div class="project-item">
+
+          <div class="item-top">
+            <span class="date">2026</span>
+            <span class="item-type">EDITORIAL DESIGN</span>
+          </div>
+
+          <h3 class="item-title">
+            Project One — Visual Archive
+          </h3>
+
+          <p class="item-description">
+            Developed an editorial concept and visual
+            system exploring image-making, typography
+            and archival material.
+          </p>
+
+        </div>
+
+
+        <div class="project-item">
+
+          <div class="item-top">
+            <span class="date">2025</span>
+            <span class="item-type">PHOTOGRAPHY</span>
+          </div>
+
+          <h3 class="item-title">
+            Project Two — Everyday Observations
+          </h3>
+
+          <p class="item-description">
+            A photographic series documenting everyday
+            details through framing, light and
+            visual rhythm.
+          </p>
+
+        </div>
+
+      </section>
+-->
+
+      <!-- 09 INTERESTS -->
+
+      <section class="section" id="interests">
+
+        <div class="section-heading">
+          <span class="section-number">07</span>
+          <h2>INTERESTS</h2>
+        </div>
+
+        <p class="interests">
+          Art books / Independent publishing /
+          Photography / Exhibition design /
+          Visual culture / Music
+        </p>
+
+      </section>
+
+    </main>
+
+  </div>
+
+
+  <!-- FOOTER -->
+
+  <footer class="footer">
+
+    <span>林頌學 — RESUME</span>
+
+    <span>END OF DOCUMENT / 2026</span>
+
+  </footer>
+
+</div>
+
+</body>
+</html>
